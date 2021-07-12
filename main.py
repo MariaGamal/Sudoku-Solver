@@ -18,3 +18,4 @@ class Sudoko:
         :return:
         Updated board every loop
         '''
+        pass

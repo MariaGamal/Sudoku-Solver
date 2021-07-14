@@ -52,5 +52,5 @@ class Sudoko:
 
 sd = Sudoko()
 while sd.gameon:
-    sd.createBoard()
-    sd.newMove(int(input().split()))
+    sd.createFullBoard()
+    sd.makeMove(int(input().split()))

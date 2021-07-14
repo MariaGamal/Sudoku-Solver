@@ -5,29 +5,52 @@ class Sudoko:
     def __init__(self):
         self.board = None # Random numbers initialization Use opencv or prettytable or strings
         self.difficulty = None # User choses game difficulty from checkbox
+        self.gameon = True
 
-    def createBoard(self):
-        self.board = np.zeros((9,9), dtype = int)
-        if self.difficulty == "Easy":
-            n = random.randint(4*9, 5*9)
-        elif self.difficulty == "Medium":
-            n = random.randint(3*9, 4*9)
-        else:
-            n = random.randint(2*9, 3*9)
-
-    def newMove(self):
+    def createFullBoard(self):
         '''
-        Takes input number from user
-        checks for validation
-        exits when complete
+        Creates full 9x9 board with correct numbering.
+        
         :return:
         '''
         pass
 
-    def printBoard(self):
+    def randomRemove(self):
         '''
-
+        Removes random spots from full board according to difficulty.
+        Prints the board.
+        
         :return:
-        Updated board every loop
         '''
         pass
+
+    def makeMove(self, x,y):
+        '''
+        Takes input coordinates from user.
+        Applies input to the board.
+        
+        :return:
+        '''
+        pass
+
+    def validate(self):
+        '''
+        Validates user new input number.
+        
+        :return:
+        '''
+        pass
+
+    def checkDone(self):
+        '''
+        Goes over the 9x9 board to check if the board is completed successfully.
+        
+        :return:
+        '''
+        pass
+
+
+sd = Sudoko()
+while sd.gameon:
+    sd.createBoard()
+    sd.newMove(int(input().split()))
